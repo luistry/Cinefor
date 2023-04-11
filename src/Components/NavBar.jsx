@@ -9,8 +9,7 @@ import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
 
 
 const NavBar = () => {
-  const [peliculas, setPeliculas] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+const  [pelicula,setPeliculas] = useState([])
 
   useEffect(() => {
     const ConsultarApi = async () => {
@@ -21,12 +20,6 @@ const NavBar = () => {
     };
     ConsultarApi();
   }, []);
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value);
-  };
-  const filteredPeliculas = peliculas.filter((pelicula) =>
-    pelicula.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
   return (
     <AppBar position="static" sx={{ bgcolor: "black", textAlign: "center" }}>
       <Typography

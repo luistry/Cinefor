@@ -10,9 +10,13 @@ const ListPeliculas = () => {
   return (
     <>
       <Typography variant="h3" color="initial"  textAlign={"center"} >Peliculas En Taquilla </Typography>
-      <Grid container sx={{ justifyContent: 'space-', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', margin: 'auto' }}>
-        {peliculas.map((pelicula) => (
-          <Peliculas key={pelicula.id} pelicula={pelicula} />
+      <Grid container spacing={2} justifyContent="center">
+       {peliculas.map((pelicula) => (
+          <Grid item xs={6} md={3} >
+          <Peliculas key={pelicula.id} pelicula={pelicula} /> 
+          
+        </Grid>
+        
         ))}
       </Grid>
     </>

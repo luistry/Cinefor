@@ -1,5 +1,5 @@
 import { Card, CardContent, CardMedia, Typography, Button } from "@mui/material";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { PeliculasContext } from "../Context/PeliculaProvider";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -14,15 +14,32 @@ const Peliculas = ({ pelicula }) => {
   } = pelicula;
   const { peliculas } = useContext(PeliculasContext);
   const baseURL = "https://image.tmdb.org/t/p/w500/";
+  
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   return (
     <div>
-      <Card>
+      <Card
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <CardMedia
           component="img"
-          height="500"
+          height="400"
           image={`${baseURL}${poster_path}`}
           alt={title}
+          sx={{
+            transform: isHovered ? 'scale(1.05)' : 'scale(1)',
+            transition: 'transform 0.3s ease'
+          }}
         />
         <CardContent>
           <Typography variant="subtitle" color="initial">

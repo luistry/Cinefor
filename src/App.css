@@ -1,0 +1,15 @@
+
+@media (max-width: 400px) {
+    /* Cambiar el estilo de la barra de navegación cuando el ancho de la pantalla es menor que 400px */
+    nav {
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  
+    /* Cambiar el estilo de los botones cuando el ancho de la pantalla es menor que 400px */
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }

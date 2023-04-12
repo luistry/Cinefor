@@ -13,3 +13,8 @@
       margin-bottom: 10px;
     }
   }
+  @media (max-width: 565px) {
+    .MuiCardMedia-root {
+      height: 250px;
+    }
+  }

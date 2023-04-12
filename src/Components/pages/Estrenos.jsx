@@ -25,7 +25,7 @@ const Estrenos = () => {
             <Card sx={{ justifyContent: "space-evenly", alignItems: "flex-start", flexWrap: "wrap", gap: "1rem", margin: "auto", maxHeight: "600px" }}>
               <CardMedia
                 component="img"
-                sx={{ maxHeight: "450px" }}
+                sx={{ maxHeight: "400px" }}
                 image={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
                 alt={pelicula.title}
               />

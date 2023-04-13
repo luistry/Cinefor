@@ -40,7 +40,8 @@ const Peliculas = ({ pelicula }) => {
 <CardMedia
   component="img"
   image={`${baseURL}${poster_path}`}
-  alt={title}
+  alt={title}   style={{ maxWidth: "100%", height: "auto", objectFit: "cover" }}
+
   sx={{
     transform: isHovered ? 'scale(1.05)' : 'scale(1)',
     transition: 'transform 0.3s ease',

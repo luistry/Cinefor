@@ -35,7 +35,12 @@ const VistaOverview = () => {
   return (
     
     <Container style={{ display: "flex", justifyContent: "center", margin: "1rem" }}>
-      <Card sx={{ width: "60%" }}>
+     <Card sx={{
+  width: "60%",
+  "@media (max-width: 600px)": {
+    width: "100%",
+  },
+}}>
         <CardContent>
           <Typography
             variant="h4"

@@ -55,7 +55,10 @@ const Masvistas = () => {
                     height: "400px",
                   },
                   "@media (max-width: 600px)": {
-                    height: "350px",
+                    height: "auto",
+                    maxWidth: "100%",
+                    margin: "0 auto",
+                    display: "block"
                   },
                 }}
                 image={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}

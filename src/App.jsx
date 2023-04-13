@@ -6,7 +6,7 @@ import Estrenos from "./Components/pages/Estrenos";
 import NavBar from "./Components/NavBar";
 import Masvistas from "./Components/pages/Masvistas";
 import ListPeliculas from "./Components/ListPeliculas";
-import DetallePelicula from "./Components/pages/DetallePelicula";
+
 import VistaOverview from "./Components/pages/VistaOverview";
 
 
@@ -21,7 +21,7 @@ function App() {
           <Container>
             <Routes>
               <Route path="/" element={<ListPeliculas />} />
-              <Route path="/peliculas/:id" element={<DetallePelicula />} />
+     
               <Route path="/Promociones" element={ <Promociones />} />
               <Route path="/Estrenos" element={ <Estrenos />} />
               <Route path="/Masvistas" element={ <Masvistas />} />

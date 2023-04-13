@@ -48,7 +48,20 @@ const VistaOverview = () => {
             component="img"
             src={`https://image.tmdb.org/t/p/w500${poster_path}`}
             alt={`Poster de ${title}`}
-            sx={{ margin: "auto" }}
+            sx={{
+              margin: "auto",
+              height: "930px",
+              "@media (max-width: 960px)": {
+                height: "930px",
+              },
+              "@media (max-width: 600px)": {
+                height: "auto",
+                maxWidth: "100%",
+                margin: "0 auto",
+                display: "block",
+              },
+            }}
+
           />
           <Typography
             variant="subtitle1"

@@ -35,7 +35,7 @@ const VistaOverview = () => {
   return (
     
     <Container style={{ display: "flex", justifyContent: "center", margin: "1rem" }}>
-      <Card sx={{ width: "80%" }}>
+      <Card sx={{ width: "60%" }}>
         <CardContent>
           <Typography
             variant="h4"
@@ -44,25 +44,28 @@ const VistaOverview = () => {
           >
             {title}
           </Typography>
+        
           <CardMedia
-            component="img"
-            src={`https://image.tmdb.org/t/p/w500${poster_path}`}
-            alt={`Poster de ${title}`}
-            sx={{
-              margin: "auto",
-              height: "930px",
-              "@media (max-width: 960px)": {
-                height: "930px",
-              },
-              "@media (max-width: 600px)": {
-                height: "auto",
-                maxWidth: "100%",
-                margin: "0 auto",
-                display: "block",
-              },
-            }}
+  component="img"
+  src={`https://image.tmdb.org/t/p/w500${poster_path}`}
+  alt={`Poster de ${title}`}
+  sx={{
+    margin: "auto",
+    maxHeight: "930px",
+    maxWidth: "100%",
+    "@media (max-width: 1260px)": {
+      maxHeight: "950px",
+    },
+    "@media (max-width: 600px)": {
+      height: "auto",
+      maxHeight: "100%",
+    },
+  }}
+/>
 
-          />
+
+
+
           <Typography
             variant="subtitle1"
             color="initial"

@@ -28,8 +28,9 @@ const Peliculas = ({ pelicula }) => {
   return (
     <div>
 
-      <Card      onMouseEnter={handleMouseEnter}      onMouseLeave={handleMouseLeave}      sx={{         maxWidth: "300px",         margin: "0 auto",         marginBottom: "1rem",          backgroundColor: "#f8f8f8",          boxShadow: "none",          borderRadius: "8px",    "&:hover": {          boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",        transform: "translateY(-2px)",      transition: "all 0.3s ease",
-          },
+      <Card onMouseEnter={handleMouseEnter} 
+        onMouseLeave={handleMouseLeave} sx={{maxWidth: "300px", margin: "0 auto", marginBottom: "1rem",backgroundColor: "#f8f8f8",
+                                             boxShadow: "none",borderRadius: "8px","&:hover": {boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",transform: "translateY(-2px)",transition: "all 0.3s ease",},
           "@media (max-width: 260px)": {
             maxWidth: "100%",
             borderRadius: "0",
